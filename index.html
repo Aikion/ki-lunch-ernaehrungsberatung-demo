@@ -213,6 +213,11 @@ nav a:hover{border-bottom-color:currentColor}
 .portrait{aspect-ratio:4/5;width:100%;max-width:24rem;border:2px dashed var(--gruen);background:#EDE3D2;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:1rem;border-radius:4px}
 .portrait p{font-family:var(--serif);font-size:1.8rem;margin:0}
 .ueber-grid{display:grid;gap:2.5rem}
+.portrait-foto{margin:0;max-width:24rem}
+.portrait-foto img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px}
+.portrait-foto figcaption,.zertifikat figcaption{font-size:.95rem;margin-top:.6rem}
+.zertifikat{margin:1.8rem 0 0;max-width:30rem}
+.zertifikat img{width:100%;border-radius:16px;box-shadow:0 12px 30px rgba(15,25,18,.15)}
 
 /* Erstgespräch */
 .zeitleiste{list-style:none;padding:0;margin:1.5rem 0 0;border-left:2px solid currentColor}
@@ -285,7 +290,7 @@ footer ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.5rem 1.5rem
   .schritte .nr{font-size:4rem}
   .angebote{grid-template-columns:1.4fr 1fr 1fr}
   .angebot.gross{grid-row:span 1;padding:2.5rem}
-  .ueber-grid{grid-template-columns:24rem 1fr;gap:5rem;align-items:center}
+  .ueber-grid{grid-template-columns:24rem 1fr;gap:5rem;align-items:start}
   .erst-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
   .kontakt-grid{grid-template-columns:1fr 1fr;gap:5rem}
   .mobil-cta{display:none}
@@ -471,19 +476,19 @@ footer ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.5rem 1.5rem
 
 <section id="ueber-jonas-reiter" aria-labelledby="h-ueber">
   <div class="wrap ueber-grid">
-    <div class="portrait" role="img" aria-label="Platzhalter für ein Porträtfoto von Jonas Reiter">
-      <p>Foto folgt</p>
-      <span class="leise">Platzhalter Porträt</span>
-    </div>
+    <figure class="portrait-foto">
+      <img src="bilder/portrait.jpg" width="576" height="720" loading="lazy" alt="Porträt von Jonas Reiter: Mann um die 50 mit grauen Haaren und Bart, dunkelgrünes Leinenhemd, entspanntes Lächeln, im Hintergrund eine helle Küche mit Pflanzen und Vorratsgläsern.">
+      <figcaption>KI-generiertes Beispielbild einer fiktiven Person</figcaption>
+    </figure>
     <div>
       <span class="label">Über mich</span>
       <h2 id="h-ueber">Über Jonas Reiter</h2>
       <p>Ich bin Ernährungsberater in Prenzlauer Berg. Viele, die zu mir kommen, wissen sehr gut, was gesund ist. Schwierig ist, es im Alltag umzusetzen – ohne dass Essen zur Pflicht wird.</p>
       <p>Daran arbeite ich mit dir. Ich frage nach deinem Tag, deinen Lieblingsgerichten und deinen Grenzen. Dann suchen wir Lösungen, die du gern umsetzt.</p>
-      <div class="ph-block">
-        <strong>Qualifikation:</strong>
-        <span class="ph">[Qualifikation eintragen]</span>
-      </div>
+      <figure class="zertifikat">
+        <img src="bilder/zertifikat-muster.jpg" width="1000" height="753" loading="lazy" alt="Muster-Zertifikat „Ernährungsberatung im Alltag“ auf den Namen Jonas Reiter, ausgestellt von einer fiktiven Musterakademie für Ernährung. Quer darüber ein roter Stempel „MUSTER“ und das Wasserzeichen „Muster · fiktiv · KI-generiert · kein echter Nachweis“.">
+        <figcaption><strong>Qualifikation (Muster):</strong> Weiterbildung „Ernährungsberatung im Alltag“. Fiktiver Nachweis für diese Demo, kein echtes Zertifikat.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -589,7 +594,7 @@ footer ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.5rem 1.5rem
     <p class="wortmarke" aria-hidden="true">Reiter</p>
     <p class="test">Testseite mit fiktiven Angaben</p>
     <p class="leise" id="deploy-test">Automatisch veröffentlicht: GitHub → Vercel (Test vom 08.10.2026)</p>
-    <p>Name, Adresse, Telefonnummer und E-Mail auf dieser Seite sind erfunden. Alle Food-Fotos und das Video sind KI-generierte Beispielbilder.</p>
+    <p>Name, Adresse, Telefonnummer und E-Mail auf dieser Seite sind erfunden. Alle Food-Fotos, das Video, das Porträt und das Muster-Zertifikat sind KI-generiert. Jonas Reiter ist eine fiktive Person.</p>
     <div class="ph-block" id="impressum">
       <strong>Impressum – Platzhalter</strong>
       Hier steht das Impressum. Es muss vor dem Livegang rechtlich geprüft werden.
