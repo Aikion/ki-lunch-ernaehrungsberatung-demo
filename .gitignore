@@ -2,3 +2,5 @@
 fotos/
 version-1-illustration/
 index-einzeldatei.html
+.vercel
+.env*
