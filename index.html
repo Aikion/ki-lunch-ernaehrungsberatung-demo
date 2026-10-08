@@ -177,7 +177,13 @@ nav a:hover{border-bottom-color:currentColor}
 .video-btn{position:absolute;right:1rem;bottom:1rem;font:inherit;font-size:.95rem;font-weight:700;color:var(--gruen);background:var(--creme);border:0;border-radius:999px;padding:.5rem 1rem;cursor:pointer}
 .split-text{padding:3.5rem var(--rand)}
 .liste-linie{list-style:none;padding:0;margin:1.5rem 0 0;border-top:1px solid var(--linie)}
-.liste-linie li{padding:.9rem 0;border-bottom:1px solid var(--linie)}
+.liste-linie li{position:relative;padding:.9rem 0 .9rem 2.4rem;border-bottom:1px solid var(--linie)}
+/* Grünes Häkchen vor jedem Punkt (dekorativ, reines CSS/SVG) */
+.liste-linie li::before{content:"";position:absolute;left:0;top:1.05rem;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--gruen-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23F6EFE4' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/1rem no-repeat}
+/* Gleichmäßige Zeilenenden: Blocksatz mit Silbentrennung */
+.split-text p{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.split-text li{text-wrap:pretty}
+.split-text h2{font-size:clamp(2.1rem,4.2vw,3.4rem)}
 .nicht{margin-top:2rem;font-size:1rem;padding-left:1rem;border-left:3px solid var(--gruen)}
 
 /* Warum Diäten */
